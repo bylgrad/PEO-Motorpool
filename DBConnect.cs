@@ -152,7 +152,7 @@ namespace firstapp
         {
             try
             {
-                string datelisted = DateTime.Now.ToString();
+                string datelisted = DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss tt");
                 string remarks = "NEW ENTRY";
                 string query = "INSERT INTO master_vehicle (objid, plateno, brand, model, version, age, fueltype, state, datelisted, remarks) VALUES('" + objid + "', '" + plateno + "', '" + brand + "', '" + model + "', '" + version + "', '" + age + "', '" + fueltype + "', '" + state + "', '" + datelisted + "', '" + remarks + "')";
 

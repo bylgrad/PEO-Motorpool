@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("DRIVER");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("VEHICLE");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("MASTER", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("REQUEST");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("TRAVEL");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("TRANSACTION", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15});
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("MFC");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("RIS");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("MOROT");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("REPORTS", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18,
-            treeNode19});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("DRIVER");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("VEHICLE");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("MASTER", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("REQUEST");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("TRAVEL");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("TRANSACTION", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("MFC");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("RIS");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("MOROT");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("REPORTS", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8,
+            treeNode9});
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,30 +123,30 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.Location = new System.Drawing.Point(5, 29);
             this.treeView1.Name = "treeView1";
-            treeNode11.Name = "Node4";
-            treeNode11.Text = "DRIVER";
-            treeNode12.Name = "Node5";
-            treeNode12.Text = "VEHICLE";
-            treeNode13.Name = "Node0";
-            treeNode13.Text = "MASTER";
-            treeNode14.Name = "Node6";
-            treeNode14.Text = "REQUEST";
-            treeNode15.Name = "Node7";
-            treeNode15.Text = "TRAVEL";
-            treeNode16.Name = "Node1";
-            treeNode16.Text = "TRANSACTION";
-            treeNode17.Name = "Node11";
-            treeNode17.Text = "MFC";
-            treeNode18.Name = "Node9";
-            treeNode18.Text = "RIS";
-            treeNode19.Name = "Node10";
-            treeNode19.Text = "MOROT";
-            treeNode20.Name = "Node8";
-            treeNode20.Text = "REPORTS";
+            treeNode1.Name = "Node4";
+            treeNode1.Text = "DRIVER";
+            treeNode2.Name = "Node5";
+            treeNode2.Text = "VEHICLE";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "MASTER";
+            treeNode4.Name = "Node6";
+            treeNode4.Text = "REQUEST";
+            treeNode5.Name = "Node7";
+            treeNode5.Text = "TRAVEL";
+            treeNode6.Name = "Node1";
+            treeNode6.Text = "TRANSACTION";
+            treeNode7.Name = "Node11";
+            treeNode7.Text = "MFC";
+            treeNode8.Name = "Node9";
+            treeNode8.Text = "RIS";
+            treeNode9.Name = "Node10";
+            treeNode9.Text = "MOROT";
+            treeNode10.Name = "Node8";
+            treeNode10.Text = "REPORTS";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode16,
-            treeNode20});
+            treeNode3,
+            treeNode6,
+            treeNode10});
             this.treeView1.Size = new System.Drawing.Size(207, 341);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -170,6 +171,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(5);

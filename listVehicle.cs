@@ -24,7 +24,7 @@ namespace firstapp
 
             con.Open();
             MySqlDataAdapter MyDA = new MySqlDataAdapter();
-            string sqlSelectAll = "SELECT objid, plateno, brand, model, fueltype, state FROM master_vehicle ORDER BY plateno";
+            string sqlSelectAll = "SELECT objid, plateno, brand, model, version, age, datelisted, fueltype, state, remarks FROM master_vehicle ORDER BY plateno";
             MyDA.SelectCommand = new MySqlCommand(sqlSelectAll, con);
 
             DataTable table = new DataTable();
@@ -39,8 +39,15 @@ namespace firstapp
             vehicleList.Columns[1].HeaderText = "PLATENO";
             vehicleList.Columns[2].HeaderText = "BRAND";
             vehicleList.Columns[3].HeaderText = "MODEL";
-            vehicleList.Columns[4].HeaderText = "FUEL TYPE";
-            vehicleList.Columns[5].HeaderText = "STATE";
+            vehicleList.Columns[4].HeaderText = "VERSION";
+            vehicleList.Columns[4].Visible = false;
+            vehicleList.Columns[5].HeaderText = "AGE";
+            vehicleList.Columns[5].Visible = false;
+            vehicleList.Columns[6].HeaderText = "DATE LISTED";
+            vehicleList.Columns[6].Visible = false;
+            vehicleList.Columns[7].HeaderText = "FUEL TYPE";
+            vehicleList.Columns[8].HeaderText = "STATE";
+            vehicleList.Columns[9].HeaderText = "REMARKS";
             con.Close();
         }
 
@@ -61,18 +68,19 @@ namespace firstapp
         {
             try
             {
-                frmVehicle frmVehicle = new frmVehicle();
+                frmVehicle fv = new frmVehicle();
                 frmVehicle.objectid = vehicleList.CurrentRow.Cells[0].Value.ToString();
-                frmVehicle.txtPlateNo.Text = vehicleList.CurrentRow.Cells[1].Value.ToString();
-                frmVehicle.txtBrand.Text = vehicleList.CurrentRow.Cells[2].Value.ToString();
-                frmVehicle.txtModel.Text = vehicleList.CurrentRow.Cells[3].Value.ToString();
-                frmVehicle.txtVersion.Text = vehicleList.CurrentRow.Cells[4].Value.ToString();
-                frmVehicle.txtAge.Text = vehicleList.CurrentRow.Cells[5].Value.ToString();
-                frmVehicle.txtFuelType.Text = vehicleList.CurrentRow.Cells[6].Value.ToString();
-                frmVehicle.txtState.Text = vehicleList.CurrentRow.Cells[7].Value.ToString();
-
-                frmVehicle.estate("READ");
-                frmVehicle.ShowDialog();
+                fv.txtPlateNo.Text = vehicleList.CurrentRow.Cells[1].Value.ToString();
+                fv.txtBrand.Text = vehicleList.CurrentRow.Cells[2].Value.ToString();
+                fv.txtModel.Text = vehicleList.CurrentRow.Cells[3].Value.ToString();
+                fv.txtVersion.Text = vehicleList.CurrentRow.Cells[4].Value.ToString();
+                fv.txtAge.Text = vehicleList.CurrentRow.Cells[5].Value.ToString();
+                fv.txtDatelisted.Text = vehicleList.CurrentRow.Cells[6].Value.ToString();
+                fv.txtFuelType.Text = vehicleList.CurrentRow.Cells[7].Value.ToString();
+                fv.txtState.Text = vehicleList.CurrentRow.Cells[8].Value.ToString();
+                fv.txtRemarks.Text = vehicleList.CurrentRow.Cells[9].Value.ToString();
+                fv.estate("READ");
+                fv.ShowDialog();
             }
             catch(Exception ex)
             {
